@@ -1,4 +1,4 @@
-# orchidae-filems
+# orchidae-filems [![Build Status](https://travis-ci.org/cherimojava/orchidae-filems.svg?branch=master)](https://travis-ci.org/cherimojava/orchidae-filems)
 
 This project contains filems the file handling service for orchidae.
 
