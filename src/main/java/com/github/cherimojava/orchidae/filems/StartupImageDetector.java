@@ -43,8 +43,8 @@ public class StartupImageDetector
         try (Stream<Path> s = Files.walk( p ))
         {
             s.filter( Files::isRegularFile )
-                 .map( Path::toAbsolutePath )
-                 .forEach( f -> publisher.publishEvent( new FileFoundEvent( f ) ) );
+             .map( Path::toAbsolutePath )
+             .forEach( f -> publisher.publishEvent( new FileFoundEvent( f ) ) );
         }
         catch ( IOException e )
         {
