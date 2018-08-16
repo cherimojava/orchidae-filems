@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +40,9 @@ public class StartupImageDetector
 
     private void checkDirectory( Path p )
     {
-        try
+        try (Stream<Path> s = Files.walk( p ))
         {
-            Files.walk( p )
-                 .filter( Files::isRegularFile )
+            s.filter( Files::isRegularFile )
                  .map( Path::toAbsolutePath )
                  .forEach( f -> publisher.publishEvent( new FileFoundEvent( f ) ) );
         }
