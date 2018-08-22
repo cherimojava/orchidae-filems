@@ -7,18 +7,18 @@ import spock.lang.Subject
 import java.nio.file.Path
 import java.nio.file.Paths
 
-class FileMetadataEnricherSpec
+class PathEnricherSpec
     extends Specification
 {
     @Subject
-    FileMetadataEnricher enricher
+    PathEnricher enricher
 
     FileHandle.FileHandleBuilder builder
 
     Path p
 
     def setup() {
-        enricher = new FileMetadataEnricher()
+        enricher = new PathEnricher()
         builder = Mock(FileHandle.FileHandleBuilder)
         p = Paths.get("/")
     }

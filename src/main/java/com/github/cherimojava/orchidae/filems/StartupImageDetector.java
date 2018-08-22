@@ -26,7 +26,7 @@ public class StartupImageDetector
 {
     private static final Logger LOG = getLogger();
 
-    @Value( "${filems.picture.directory:/Users/pknobel/Pictures}" )
+    @Value( "${filems.picture.directory:}" )
     private Set<Path> directories;
 
     @Autowired

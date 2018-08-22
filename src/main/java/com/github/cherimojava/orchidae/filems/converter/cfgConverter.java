@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.convert.MongoCustomConversions;
 import com.google.common.collect.Lists;
 
 @Configuration
-@ComponentScan( basePackageClasses = cfgConverter.class )
+@ComponentScan
 public class cfgConverter
 {
     @Bean

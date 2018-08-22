@@ -11,7 +11,7 @@ import com.github.cherimojava.orchidae.filems.persistence.FileHandle;
  * Adds the path to the FileHandle
  */
 @Component
-public class FileMetadataEnricher
+public class PathEnricher
     implements FileHandleEnricher
 {
     @Override

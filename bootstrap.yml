@@ -1,0 +1,4 @@
+spring:
+  application.name: orchidae-filems
+  cloud.config:
+    label: develop
