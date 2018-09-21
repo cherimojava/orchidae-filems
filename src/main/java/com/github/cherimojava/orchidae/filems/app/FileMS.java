@@ -2,6 +2,7 @@ package com.github.cherimojava.orchidae.filems.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -15,11 +16,12 @@ import com.github.cherimojava.orchidae.filems.persistence.FileHandleRepository;
  */
 @SpringBootApplication( scanBasePackageClasses = { FileIndexer.class } )
 @EnableMongoRepositories( basePackageClasses = { FileHandleRepository.class } )
+@EnableDiscoveryClient
 @Import( { cfgConverter.class, cfgEnricher.class } )
-public class Application
+public class FileMS
 {
     public static void main( String[] args )
     {
-        SpringApplication.run( Application.class, args );
+        SpringApplication.run( FileMS.class, args );
     }
 }

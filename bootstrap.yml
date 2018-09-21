@@ -1,4 +1,6 @@
 spring:
   application.name: orchidae-filems
   cloud.config:
+    discovery:
+      enabled: true
     label: develop
