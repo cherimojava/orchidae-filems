@@ -13,7 +13,7 @@
 	<parent>
         <groupId>com.github.cherimojava.orchidae</groupId>
         <artifactId>orchidae-parent</artifactId>
-        <version>2.0.4_0-SNAPSHOT</version>
+		<version>2.0.5_0-SNAPSHOT</version>
 	</parent>
 
 	<properties>
