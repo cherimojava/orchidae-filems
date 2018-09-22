@@ -4,3 +4,12 @@ spring:
     discovery:
       enabled: true
     label: develop
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ipAddress: 192.168.0.2
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://${registry.host:localhost}:${server.port:8761}/eureka/
